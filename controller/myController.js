@@ -61,3 +61,14 @@ router.get("/:entryId/edit", (req, res) => {
     })
 });
 
+router.put("/:entryId", (req, res) => {
+    console.log(req.body);
+
+    console.log(req.body);
+
+    db.Entry.findByIdAndUpdate(req.params.entryId, req.body, (err, updatedEntry) => {
+        if (err) return console.log(err);
+
+        res.redirect(`/list/${req.params.entryId}`)
+    })
+})
