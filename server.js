@@ -4,10 +4,9 @@ const rowdy = require("rowdy-logger");
 const methodOverride = require("method-override");
 
 const app = express();
-const PORT  4000;
+const PORT = 3000;
 const rowdyResults = rowdy.begin(app);
 const myController = require("./controller/myController");
-const e = require("express");
 
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
@@ -19,7 +18,7 @@ app.get("/", (req, res) => {
     res.render("homepage.ejs");
 })
 
-app.listen(process.env.PORT || 4000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`The server is running on port ${PORT}`);
     rowdyResults.print();
-})
+n
