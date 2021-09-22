@@ -2,11 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const rowdy = require("rowdy-logger");
 const methodOverride = require("method-override");
+const myController = require("./controller/myController.js");
+const db = require("./models/index.js");
 
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 const rowdyResults = rowdy.begin(app);
-const myController = require("./controller/myController.js");
+
 
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
@@ -18,7 +20,11 @@ app.get("/", (req, res) => {
     res.render("homepage.ejs");
 })
 
-app.listen(process.env.PORT || 3000, () => {
+
+
+
+app.listen(PORT, () => {
     console.log(`The server is running on port ${PORT}`);
-    rowdyResults.print();
-})
+    rowdyResults.print()
+});
+
