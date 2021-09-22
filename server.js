@@ -6,7 +6,7 @@ const methodOverride = require("method-override");
 const app = express();
 const PORT = 3000;
 const rowdyResults = rowdy.begin(app);
-const myController = require("./controller/myController");
+const myController = require("./controller/myController.js");
 
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
