@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
 
-    db.Entry.find({ user: req.session.currentUser._id }, (err, allEntries) => {
+    db.Entry.find({}, (err, allEntries) => {
         if (err) return console.log(err);
 
         res.render("list.ejs", { allEntries: allEntries })
@@ -31,8 +31,6 @@ router.post("/", (req, res) => {
     console.log(req.session);
 
     console.log("req.body ==>", req.body);
-
-    req.body.user = req.session.currentUser._id;
 
     db.Entry.create(req.body, (err, createdEntry) => {
         if (err) return console.log(err);

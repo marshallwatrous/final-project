@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/final", myController);
 
 app.get("/", (req, res) => {
-    res.render("homepage.ejs");
+    res.render("home.ejs");
 })
 
 

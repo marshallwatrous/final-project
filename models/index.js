@@ -5,8 +5,6 @@ const connectionString = "mongodb://localhost:27017/entrydb2";
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
 });
 
 mongoose.connection.on("connected", () => {
