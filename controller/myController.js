@@ -28,7 +28,7 @@ router.get("/:entryId", (req, res) => {
 
 router.post("/", (req, res) => {
     
-    console.log(req.session);
+    // console.log(req.session);
 
     console.log("req.body ==>", req.body);
 
@@ -37,7 +37,7 @@ router.post("/", (req, res) => {
 
         console.log(createdEntry);
 
-        res.redirect("/list")
+        res.redirect("/final")
     });
 })
 
@@ -45,8 +45,8 @@ router.delete("/:entryId", (req, res) => {
     
     db.Entry.findByIdAndDelete(req.params.entryId, (err) => {
         if (err) return console.log(err);
-
-        res.redirect("/list");
+        res.redirect("/final");
+        // res.json({message:"Entry Successfully Deleted"});
     })
 })
 
@@ -67,7 +67,7 @@ router.put("/:entryId", (req, res) => {
     db.Entry.findByIdAndUpdate(req.params.entryId, req.body, (err, updatedEntry) => {
         if (err) return console.log(err);
 
-        res.redirect(`/list/${req.params.entryId}`)
+        res.redirect(`/final/${req.params.entryId}`)
     })
 })
 

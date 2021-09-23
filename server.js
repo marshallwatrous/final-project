@@ -13,7 +13,7 @@ const rowdyResults = rowdy.begin(app);
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
-// app.use(express.static("public"));
+app.use(express.static("public"));
 app.use("/final", myController);
 
 app.get("/", (req, res) => {
