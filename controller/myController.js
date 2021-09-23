@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("..models/index.js");
+const db = require("../models/index.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -72,3 +72,5 @@ router.put("/:entryId", (req, res) => {
         res.redirect(`/list/${req.params.entryId}`)
     })
 })
+
+module.exports = router;

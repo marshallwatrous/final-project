@@ -1,4 +1,4 @@
-require("dotenv").config();
+// const env = require("dotenv").config();
 const express = require("express");
 const rowdy = require("rowdy-logger");
 const methodOverride = require("method-override");
@@ -13,8 +13,8 @@ const rowdyResults = rowdy.begin(app);
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static("public"));
-app.use("/final-project", myController);
+// app.use(express.static("public"));
+app.use("/final", myController);
 
 app.get("/", (req, res) => {
     res.render("homepage.ejs");
