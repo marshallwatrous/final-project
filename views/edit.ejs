@@ -7,6 +7,24 @@
     <title>Edit</title>
 </head>
 <body>
-    
+    <h1>Edit the <%= oneEntry.name %> Post</h1>
+    <form action="/entries/<%= oneEntry._id %>?_method=PUT" method="POST">
+        <label for="picture">Picture:</label>
+        <input name="picture" type="text" value="<%= oneEntry.picture %>">
+        <br>
+        <label for="name">Name:</label>
+        <input name="name" type="text" value="<%= oneEntry.name %>">
+        <br>
+        <label for="dateSeen">Date Seen:</label>
+        <input name="dateSeen" type="text" value="<%= oneEntry.dateSeen %>">
+        <br>
+        <label for="numberSeen">Number Seen:</label>
+        <input name="numberSeen" type="text" value="<%= oneEntry.numberSeen %>">
+        <br>
+        <label for="place">Place:</label>
+        <input name="place" type="text" value="<%= oneEntry.place %>">
+        <br>
+        <input type="submit" value="Update Post">
+    </form>
 </body>
 </html>
