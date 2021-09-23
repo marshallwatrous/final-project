@@ -7,6 +7,17 @@
     <title>List</title>
 </head>
 <body>
-    <h1>These are all my entries</h1>
+    <h1>Select a post to view:</h1>
+    <% for(let i = 0; i < allEntries.length; i++) { %>
+        <a href="/entries/<%= allEntries[i]_id" %>">
+            <h2><%= allEntries[i].name %></h2>
+        </a>
+
+        <form action="/entries/<%= allEntries[i]._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete this Post">
+        </form>
+
+        <a href="/entries/<%= allEntries[i]._id %>/edit">Edit this Entry</a>
+ <% } %>
 </body>
 </html>
