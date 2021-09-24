@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>List</title>
 </head>
-<body>
+<body class="list">
     <h1>Select a post to view:</h1>
     <% for(let i = 0; i < allEntries.length; i++) { %>
         <a href="/final/<%= allEntries[i]._id%>">

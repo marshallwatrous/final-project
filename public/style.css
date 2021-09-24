@@ -1,11 +1,25 @@
 .home {
     background-image: url("./images/deer.jpeg");
+    background-size: cover;
 }
 
 .add {
     background-image: url("./images/goat.jpg");
+    background-size: cover;
 }
 
-.post {
+.entry {
     background-image: url("./images/desert.jpg");
+    background-size: cover;
+}
+
+.list {
+    background-image: url("./images/whale.jpg");
+    background-size: cover;
+}
+
+.title {
+    font-size: 75px;
+    text-align: center;
+    color: black;
 }
