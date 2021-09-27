@@ -1,25 +1,43 @@
+* {
+    font-family: 'Bebas Neue', cursive;
+}
+
 .home {
     background-image: url("./images/deer.jpeg");
     background-size: cover;
+    text-align: center;
+    font-size: 30px;
 }
 
 .add {
     background-image: url("./images/goat.jpg");
     background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
 
 .entry {
     background-image: url("./images/desert.jpg");
     background-size: cover;
+    text-align: center;
+    font-size: 20px;
 }
 
 .list {
     background-image: url("./images/whale.jpg");
     background-size: cover;
+    text-align: left;
+    font-size: 30px;
+    color: yellowgreen;
 }
 
-.title {
-    font-size: 75px;
+.edit {
+    background-image: url("./images/owl.jpg");
+    background-size: cover;
     text-align: center;
-    color: black;
+    font-size: 30px;
+
+.button {
+    font-size: 20px;
 }
